@@ -906,15 +906,15 @@
 		<!--178--><item>5-6183-RURAL</item>
 	</string-array>
 	<string-array name="Seccion6">
-		<!-- 0--><item>6-523-URBANO(A)</item>
-		<!-- 0--><item>6-524-URBANO(A)</item>
-		<!-- 0--><item>6-525-URBANO(A)</item>
-		<!-- 0--><item>6-526-URBANO(A)</item>
-		<!-- 0--><item>6-527-URBANO(A)</item>
-		<!-- 0--><item>6-528-URBANO(A)</item>
-		<!-- 0--><item>6-529-URBANO(A)</item>
-		<!-- 0--><item>6-530-URBANO(A)</item>
-		<!-- 0--><item>6-531-URBANO(A)</item>
+		<!-- 01--><item>6-523-URBANO(A)</item>
+		<!-- 02--><item>6-524-URBANO(A)</item>
+		<!-- 03--><item>6-525-URBANO(A)</item>
+		<!-- 04--><item>6-526-URBANO(A)</item>
+		<!-- 05--><item>6-527-URBANO(A)</item>
+		<!-- 06--><item>6-528-URBANO(A)</item>
+		<!-- 07--><item>6-529-URBANO(A)</item>
+		<!-- 08--><item>6-530-URBANO(A)</item>
+		<!-- 09--><item>6-531-URBANO(A)</item>
 		<!-- 10--><item>6-532-URBANO(A)</item>
 		<!-- 1--><item>6-533-URBANO(A)</item>
 		<!-- 1--><item>6-534-URBANO(A)</item>
@@ -3738,8 +3738,8 @@
 	</string-array>
 
 	<string-array name="Seccion23">
-		<!-- --><item>23-94-URBANO(A)</item>
-		<!-- --><item>23-95-RURAL</item>
+		<!-- 01--><item>23-94-URBANO(A)</item>
+		<!-- 02--><item>23-95-RURAL</item>
 		<!-- --><item>23-96-RURAL</item>
 		<!-- --><item>23-97-RURAL</item>
 		<!-- --><item>23-98-RURAL</item>
