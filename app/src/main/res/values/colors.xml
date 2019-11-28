@@ -2,10 +2,16 @@
 <resources>
     <color name="colorPrimary">#BC2779</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#6F097C</color>
 
+    <color name="colorPrimaryBDisacle">#6B2477</color>
     <color name="colorPrimaryDisable">#008577</color>
+    <color name="colorPrimaryDarkDisable">#00574B</color>
+    <color name="colorAccentDisable">#D81B60</color>
 
     <color name="colorINEA">#BC2779</color>
     <color name="colorINEB">#6B2477</color>
+    <color name="colorINEC">#0DFD0E8A</color>
+    <color name="colorINED">#B06B2477</color>
+    <color name="colorINEE">#FFFFFF</color>
 </resources>

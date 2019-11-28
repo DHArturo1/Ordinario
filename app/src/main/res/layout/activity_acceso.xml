@@ -37,6 +37,9 @@
             android:textSize="@dimen/InputTextA"
             android:focusable="true"
             android:focusableInTouchMode="true"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:drawableLeft="@drawable/ic_person_outline_black"
             android:textColorHint="@color/colorAccent"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,12 +47,13 @@
         android:id="@+id/AccesoET2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/MarginA"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/InputTextA"
+            android:layout_marginRight="@dimen/InputTextA"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="Contraseña"
@@ -57,14 +61,30 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesion"
-        android:textSize="@dimen/InputTextA"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/boton2"
-        android:layout_margin="@dimen/MarginA"/>
+        android:layout_margin="@dimen/MarginTopA"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/AccesoBT1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/boton2"
+            android:text="Iniciar Sesion"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/AccesoBT2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/boton1"
+            android:layout_weight="1"
+            android:text="Salir"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
 
 </LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/side_background_a"
     android:orientation="vertical">
 
     <ScrollView
@@ -36,7 +37,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre completo" />
+                    android:drawableLeft="@drawable/ic_form_1"
+                    android:drawablePadding="20dp"
+                    android:hint="Nombre completo"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -50,19 +54,25 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Domicilio" />
+                    android:drawableLeft="@drawable/ic_form_2"
+                    android:drawablePadding="20dp"
+                    android:hint="Domicilio"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <EditText
                 android:id="@+id/AltaE4"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/MarginLeftET"
                 android:layout_marginTop="@dimen/MarginTopETET"
                 android:layout_marginRight="@dimen/MarginRightET"
+                android:drawableLeft="@drawable/ic_form_3"
+                android:drawablePadding="20dp"
                 android:ems="10"
                 android:hint="Fecha de Nacimiento"
-                android:inputType="date" />
+                android:inputType="date"
+                android:paddingLeft="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,10 +83,10 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_form_11"
                     android:text="Genero"
                     android:textAlignment="center"
                     android:textSize="@dimen/InputTextA" />
@@ -87,13 +97,13 @@
 
                     <RadioButton
                         android:id="@+id/AltaE5"
-                        android:layout_width="match_parent"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="Masculino" />
 
                     <RadioButton
                         android:id="@+id/AltaE6"
-                        android:layout_width="match_parent"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="Femenino" />
                 </RadioGroup>
@@ -110,7 +120,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Clave Electoral" />
+                    android:drawableLeft="@drawable/ic_form_4"
+                    android:drawablePadding="20dp"
+                    android:hint="Clave Electoral"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -124,7 +137,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CURP" />
+                    android:drawableLeft="@drawable/ic_form_5"
+                    android:drawablePadding="20dp"
+                    android:hint="CURP"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -138,7 +154,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Año de Registro" />
+                    android:drawableLeft="@drawable/ic_form_6"
+                    android:drawablePadding="20dp"
+                    android:hint="Año de Registro"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -152,11 +171,13 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Numero de Version" />
+                    android:drawableLeft="@drawable/ic_form_7"
+                    android:drawablePadding="20dp"
+                    android:hint="Numero de Version"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/AltaE11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/MarginLeftTV"
@@ -169,16 +190,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/MarginTopETRB"
                 android:layout_marginLeft="@dimen/MarginLeftSP"
+                android:layout_marginTop="@dimen/MarginTopETRB"
                 android:layout_marginRight="@dimen/MarginRightSP"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="Distrito"
-                    android:textSize="@dimen/InputTextA"/>
+                    android:textSize="@dimen/InputTextA" />
 
                 <Spinner
                     android:id="@+id/AltaE12"
@@ -195,10 +216,10 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="Seccion"
-                    android:textSize="@dimen/InputTextA"/>
+                    android:textSize="@dimen/InputTextA" />
 
                 <Spinner
                     android:id="@+id/AltaE13"
@@ -217,7 +238,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Localidad" />
+                    android:drawableLeft="@drawable/ic_form_8"
+                    android:drawablePadding="20dp"
+                    android:hint="Localidad"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -230,7 +254,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Año de Emision" />
+                    android:drawableLeft="@drawable/ic_form_9"
+                    android:drawablePadding="20dp"
+                    android:hint="Año de Emision"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -243,8 +270,21 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Vigencia" />
+                    android:drawableLeft="@drawable/ic_form_10"
+                    android:drawablePadding="20dp"
+                    android:hint="Vigencia"
+                    android:paddingLeft="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/AltaE17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/MarginA"
+                android:background="@drawable/boton1"
+                android:text="Registrar"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/InputTextA" />
 
         </LinearLayout>
     </ScrollView>
