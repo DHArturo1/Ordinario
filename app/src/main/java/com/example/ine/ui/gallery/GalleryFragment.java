@@ -32948,7 +32948,7 @@ public class GalleryFragment extends Fragment {
         String nombre = ETnombre.getEditText().getText().toString();
         String domicilio = ETdomicilio.getEditText().getText().toString();
         String fechanacimiento = CVfechanacimiento.getText().toString();
-        String genero = RBmasculino.isChecked().getText().toString();
+        //String genero = RBmasculino.isChecked().getText().toString();
         String claveelectoral = ETclaveelectoral.getEditText().getText().toString();
         String curp = ETcurp.getEditText().getText().toString();
         String anioregistro = ETanioregistro.getEditText().getText().toString();
@@ -32958,27 +32958,6 @@ public class GalleryFragment extends Fragment {
         String localidad = ETlocalidad.getEditText().getText().toString();
         String anioemision = ETanioemision.getEditText().getText().toString();
         String vigencia = ETvigencia.getEditText().getText().toString();
-
-        if(!TextUtils.isEmpty(nombre)){
-            Activos a = new Activos();
-            a.setAnioEmision(anioemision);
-            a.setAnioRegistro(anioregistro);
-            a.setClaveElectoral(claveelectoral);
-            a.setCurp(curp);
-            a.setDistrito(distrito);
-            a.setDomicilio(domicilio);
-            a.setFechaNacimiento(fechanacimiento);
-            a.setGenero("");
-            a.setLocalidad(localidad);
-            a.setNombre(nombre);
-            a.setNumeroVersion(numeroversion);
-            a.setSeccion(seccion);
-            a.setVigencia(vigencia);
-            reference.child("Activos").child(a.getCurp()).setValue(a);
-            Toast.makeText(getContext(), "Agregado", Toast.LENGTH_LONG).show();
-            limpiarCajas();
-        }
-
     }
 
     private void limpiarCajas() {
