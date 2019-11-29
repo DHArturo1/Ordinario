@@ -2,6 +2,7 @@ package com.example.ine.ui.gallery;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,14 +26,22 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.ine.R;
 import com.example.ine.firebase.Activos;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
+
+    DatabaseReference databaseReference;
 
     String a="";
     String b="";
@@ -42,8 +51,6 @@ public class GalleryFragment extends Fragment {
     Spinner SPdistrito, SPseccion;
     EditText CVfechanacimiento;
     Button BTguardar;
-
-    private DatabaseReference reference;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -57,6 +64,20 @@ public class GalleryFragment extends Fragment {
                 textView.setText(s);
             }
         });
+    
+        /*classReference.child("activos").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Activos activos = dataSnapshot.getValue(Activos.class);
+                Log.i("ACTIVOS", Activos.getNombre());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        */
 
         ETnombre = root.findViewById(R.id.AltaE2);
         ETdomicilio = root.findViewById(R.id.AltaE3);
@@ -73,8 +94,10 @@ public class GalleryFragment extends Fragment {
         ETanioemision = root.findViewById(R.id.AltaE15);
         ETvigencia = root.findViewById(R.id.AltaE16);
         BTguardar = root.findViewById(R.id.AltaE17);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 		
-		/**
+	/**
          * Array
          */
 
@@ -32940,40 +32963,116 @@ public class GalleryFragment extends Fragment {
 
             }
         });
+        /*
+        FirebaseApp.initializeApp(getContext());
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        final DatabaseReference databaseReference = firebaseDatabase.getReference();
+        */
+        BTguardar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+                String nombre = ETnombre.getEditText().getText().toString();
+                String domicilio = ETdomicilio.getEditText().getText().toString();
+                String fechanacimiento = CVfechanacimiento.getText().toString();
+                //String genero = RBmasculino.isChecked().getText().toString();
+                String claveelectoral = ETclaveelectoral.getEditText().getText().toString();
+                String curp = ETcurp.getEditText().getText().toString();
+                String anioregistro = ETanioregistro.getEditText().getText().toString();
+                String numeroversion = ETnumeroversion.getEditText().getText().toString();
+                String distrito = SPdistrito.getSelectedItem().toString();
+                String seccion = SPseccion.getSelectedItem().toString();
+                String localidad = ETlocalidad.getEditText().getText().toString();
+                String anioemision = ETanioemision.getEditText().getText().toString();
+                String vigencia = ETvigencia.getEditText().getText().toString();
+
+
+                if(nombre.equals("")||domicilio.equals("")||curp.equals("")){
+
+                    validacion();
+
+                } else {
+
+                    cargarDatosFirebase(
+                            nombre,
+                            domicilio,
+                            fechanacimiento,
+                            claveelectoral,
+                            curp,
+                            anioregistro,
+                            numeroversion,
+                            distrito,
+                            seccion,
+                            localidad,
+                            anioemision,
+                            vigencia
+                    );
+
+                    /*
+                    Activos a = new Activos();
+                    a.setNombre(nombre);
+                    a.setDomicilio(domicilio);
+                    a.setCurp(curp);
+                    databaseReference.child("ine").child(a.getCurp()).setValue(a);
+                    */
+                    //Toast.makeText(getContext(), "Se realizo el registro: " + activos, Toast.LENGTH_SHORT).show();
+                    limpiarCajas();
+                }
+            }
+        });
 
         return root;
     }
 
-    public void registrarAlta(){
-        String nombre = ETnombre.getEditText().getText().toString();
-        String domicilio = ETdomicilio.getEditText().getText().toString();
-        String fechanacimiento = CVfechanacimiento.getText().toString();
+    private void cargarDatosFirebase(
+            String nombre,
+            String domicilio,
+            String fechanacimiento,
+            String claveelectoral,
+            String curp,
+            String anioregistro,
+            String numeroversion,
+            String distrito,
+            String seccion,
+            String localidad,
+            String anioemision,
+            String vigencia
+    ) {
+        Map<String, Object> datos = new HashMap<>();
+        datos.put("nombre", nombre);
+        datos.put("domicilio", domicilio);
+        datos.put("fechanacimiento", fechanacimiento);
         //String genero = RBmasculino.isChecked().getText().toString();
-        String claveelectoral = ETclaveelectoral.getEditText().getText().toString();
-        String curp = ETcurp.getEditText().getText().toString();
-        String anioregistro = ETanioregistro.getEditText().getText().toString();
-        String numeroversion = ETnumeroversion.getEditText().getText().toString();
-        String distrito = SPdistrito.getSelectedItem().toString();
-        String seccion = SPseccion.getSelectedItem().toString();
-        String localidad = ETlocalidad.getEditText().getText().toString();
-        String anioemision = ETanioemision.getEditText().getText().toString();
-        String vigencia = ETvigencia.getEditText().getText().toString();
+        datos.put("claveelectoral", claveelectoral);
+        datos.put("curp", curp);
+        datos.put("anioregistro",anioregistro);
+        datos.put("numeroversion",numeroversion);
+        datos.put("distrito", distrito);
+        datos.put("seccion", seccion);
+        datos.put("localidad", localidad);
+        datos.put("anioemision", anioemision);
+        datos.put("vigencia", vigencia);
+        databaseReference.child("ine").push().setValue(datos);
+        Toast.makeText(getContext(), "Datos: " + datos, Toast.LENGTH_SHORT).show();
     }
 
     private void limpiarCajas() {
         ETnombre.getEditText().setText("");
         ETdomicilio.getEditText().setText("");
+        ETcurp.getEditText().setText("");
     }
 
     private void validacion() {
         String nombre = ETnombre.getEditText().getText().toString();
         String domicilio = ETdomicilio.getEditText().getText().toString();
+        String curp = ETcurp.getEditText().getText().toString();
 
         if (nombre.equals("")){
-            ETnombre.setError("Dato requerido");
-        }
-        else if (domicilio.equals("")){
-            ETdomicilio.setError("Dato requerido");
+            ETnombre.setError("Nombre requerido");
+        } else if (domicilio.equals("")){
+            ETdomicilio.setError("Domicilio requerido");
+        } else if (curp.equals("")){
+            ETcurp.setError("Curp requerido");
         }
     }
 }

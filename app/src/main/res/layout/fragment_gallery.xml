@@ -7,6 +7,16 @@
     android:background="@drawable/side_background_a"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/text_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/MarginLeftTV"
+        android:layout_marginTop="@dimen/MarginTopA"
+        android:layout_marginRight="@dimen/MarginRightTV"
+        android:textAlignment="center"
+        android:textSize="@dimen/TextViewA" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,16 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/text_gallery"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/MarginLeftTV"
-                android:layout_marginTop="@dimen/MarginTopA"
-                android:layout_marginRight="@dimen/MarginRightTV"
-                android:textAlignment="center"
-                android:textSize="@dimen/TextViewA" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE2"
@@ -132,7 +132,10 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/MarginLeftET"
                 android:layout_marginTop="@dimen/MarginTopETET"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginRight="@dimen/MarginRightET"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"

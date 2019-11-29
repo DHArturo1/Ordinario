@@ -16,6 +16,9 @@ public class Activos {
     String AnioEmision;
     String Vigencia;
 
+    public Activos() {
+    }
+
     public String getNombre() {
         return Nombre;
     }
