@@ -28,7 +28,10 @@
         android:id="@+id/AccesoET1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/MarginA">
+        android:layout_margin="@dimen/MarginA"
+        android:textColorHint="@color/colorINEA"
+        app:boxStrokeColor="@color/colorINEB"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -47,7 +50,11 @@
         android:id="@+id/AccesoET2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:passwordToggleEnabled="true">
+        android:layout_marginLeft="20dp"
+        app:passwordToggleEnabled="true"
+        android:textColorHint="@color/colorINEA"
+        app:boxStrokeColor="@color/colorINEB"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -56,6 +63,8 @@
             android:layout_marginRight="@dimen/InputTextA"
             android:focusable="true"
             android:focusableInTouchMode="true"
+            android:paddingRight="10dp"
+            android:drawablePadding="20dp"
             android:hint="Contraseña"
             android:textSize="@dimen/InputTextA"
             android:inputType="textPassword" />
