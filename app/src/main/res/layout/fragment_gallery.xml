@@ -11,11 +11,10 @@
         android:id="@+id/text_gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/MarginLeftTV"
-        android:layout_marginTop="@dimen/MarginTopA"
-        android:layout_marginRight="@dimen/MarginRightTV"
+        android:layout_marginLeft="@dimen/TituloFragmentsMargenesLaterales"
+        android:layout_marginRight="@dimen/TituloFragmentsMargenesLaterales"
         android:textAlignment="center"
-        android:textSize="@dimen/TextViewA" />
+        android:textSize="@dimen/TituloFragments" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,9 +29,8 @@
                 android:id="@+id/AltaE2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopTVET"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -40,16 +38,16 @@
                     android:drawableLeft="@drawable/ic_form_1"
                     android:drawablePadding="20dp"
                     android:hint="Nombre completo"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopETET"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -57,22 +55,23 @@
                     android:drawableLeft="@drawable/ic_form_2"
                     android:drawablePadding="20dp"
                     android:hint="Domicilio"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <EditText
                 android:id="@+id/AltaE4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopETET"
-                android:layout_marginRight="@dimen/MarginRightET"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
                 android:drawableLeft="@drawable/ic_form_3"
                 android:drawablePadding="20dp"
                 android:ems="10"
                 android:hint="Fecha de Nacimiento"
                 android:inputType="date"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/DatosIngresoEditText"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,16 +122,16 @@
                     android:drawableLeft="@drawable/ic_form_4"
                     android:drawablePadding="20dp"
                     android:hint="Clave Electoral"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopETET"
-                android:layout_marginRight="@dimen/MarginRightET"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
                 app:counterEnabled="true"
                 app:counterMaxLength="15"
                 app:errorEnabled="true">
@@ -143,16 +142,16 @@
                     android:drawableLeft="@drawable/ic_form_5"
                     android:drawablePadding="20dp"
                     android:hint="CURP"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopETET"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -160,16 +159,16 @@
                     android:drawableLeft="@drawable/ic_form_6"
                     android:drawablePadding="20dp"
                     android:hint="Año de Registro"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopETET"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -177,7 +176,8 @@
                     android:drawableLeft="@drawable/ic_form_7"
                     android:drawablePadding="20dp"
                     android:hint="Numero de Version"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -207,7 +207,8 @@
                 <Spinner
                     android:id="@+id/AltaE12"
                     android:layout_width="200dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </LinearLayout>
 
             <!--Seccion-->
@@ -227,16 +228,16 @@
                 <Spinner
                     android:id="@+id/AltaE13"
                     android:layout_width="200dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopTVSP"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -244,15 +245,16 @@
                     android:drawableLeft="@drawable/ic_form_8"
                     android:drawablePadding="20dp"
                     android:hint="Localidad"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE15"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -260,15 +262,16 @@
                     android:drawableLeft="@drawable/ic_form_9"
                     android:drawablePadding="20dp"
                     android:hint="Año de Emision"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AltaE16"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -276,7 +279,8 @@
                     android:drawableLeft="@drawable/ic_form_10"
                     android:drawablePadding="20dp"
                     android:hint="Vigencia"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -287,7 +291,7 @@
                 android:background="@drawable/boton1"
                 android:text="Registrar"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/InputTextA" />
+                android:textSize="@dimen/BotonesTexto" />
 
         </LinearLayout>
     </ScrollView>

@@ -27,23 +27,31 @@ public class AccesoActivity extends AppCompatActivity {
         editUsuario=findViewById(R.id.AccesoET1);
         editContrasenia=findViewById(R.id.AccesoET2);
         Button bIngresar=findViewById(R.id.AccesoBT1);
+        botonIngresar(bIngresar);
+
+        Button bSalir = findViewById(R.id.AccesoBT2);
+        botonSalir(bSalir);
+
+        progressDialog = new ProgressDialog(this);
+
+    }
+
+    private void botonIngresar(Button bIngresar) {
         bIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ingresar(view);
             }
         });
+    }
 
-        Button bSalir = findViewById(R.id.AccesoBT2);
+    private void botonSalir(Button bSalir) {
         bSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.exit(0);
             }
         });
-
-        progressDialog = new ProgressDialog(this);
-
     }
 
     public void ingresar(View view) {

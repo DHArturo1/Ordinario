@@ -20,15 +20,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="INE"
-        android:textSize="@dimen/TextViewA"
-        android:layout_margin="@dimen/MarginA"
+        android:textSize="@dimen/TituloFragments"
+        android:layout_marginLeft="@dimen/TituloFragmentsMargenesLaterales"
+        android:layout_marginRight="@dimen/TituloFragmentsMargenesLaterales"
         android:textAlignment="center"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/AccesoET1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/MarginA"
+        android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+        android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
         android:textColorHint="@color/colorINEA"
         app:boxStrokeColor="@color/colorINEB"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -37,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Usuario"
-            android:textSize="@dimen/InputTextA"
+            android:textSize="@dimen/DatosIngresoEditText"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:paddingLeft="10dp"
@@ -50,7 +52,8 @@
         android:id="@+id/AccesoET2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+        android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
         app:passwordToggleEnabled="true"
         android:textColorHint="@color/colorINEA"
         app:boxStrokeColor="@color/colorINEB"
@@ -59,14 +62,12 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/InputTextA"
-            android:layout_marginRight="@dimen/InputTextA"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:paddingRight="10dp"
             android:drawablePadding="20dp"
             android:hint="Contraseña"
-            android:textSize="@dimen/InputTextA"
+            android:textSize="@dimen/DatosIngresoEditText"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +84,8 @@
             android:layout_marginRight="25dp"
             android:background="@drawable/boton2"
             android:text="Iniciar Sesion"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/BotonesTexto"/>
 
         <Button
             android:id="@+id/AccesoBT2"
@@ -93,7 +95,8 @@
             android:background="@drawable/boton1"
             android:layout_weight="1"
             android:text="Salir"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/BotonesTexto"/>
     </LinearLayout>
 
 </LinearLayout>

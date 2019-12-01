@@ -1,5 +1,36 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!--
+        Generales
+    -->
+
+    <dimen name="TituloFragments">30sp</dimen>
+    <dimen name="TituloFragmentsMargenesLaterales">20sp</dimen>
+
+    <dimen name="DatosIngresoEditText">15sp</dimen>
+    <dimen name="DatosIngresoMargenesLaterales">15sp</dimen>
+
+    <dimen name="BotonesTexto">15sp</dimen>
+
+    <!--
+        CardView
+    -->
+
+    <dimen name="ConsultaNombre">20sp</dimen>
+    <dimen name="ConsultaDomicilio">15sp</dimen>
+    <dimen name="ConsultaFechaNacimiento">15sp</dimen>
+    <dimen name="ConsultaGenero">15sp</dimen>
+    <dimen name="ConsultaClaveElectoral">15sp</dimen>
+    <dimen name="ConsultaCurp">15sp</dimen>
+    <dimen name="ConsultaAnioRegistro">15sp</dimen>
+    <dimen name="ConsultaNumeroVersion">15sp</dimen>
+    <dimen name="ConsultaDistrito">15sp</dimen>
+    <dimen name="ConsultaSeccion">15sp</dimen>
+    <dimen name="ConsultaLocalidad">15sp</dimen>
+    <dimen name="ConsultaAnioEmision">15sp</dimen>
+    <dimen name="ConsultaVigencia">15sp</dimen>
+
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>

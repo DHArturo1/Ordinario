@@ -64,20 +64,6 @@ public class GalleryFragment extends Fragment {
                 textView.setText(s);
             }
         });
-    
-        /*classReference.child("activos").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Activos activos = dataSnapshot.getValue(Activos.class);
-                Log.i("ACTIVOS", Activos.getNombre());
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        */
 
         ETnombre = root.findViewById(R.id.AltaE2);
         ETdomicilio = root.findViewById(R.id.AltaE3);
@@ -97,7 +83,7 @@ public class GalleryFragment extends Fragment {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 		
-	/**
+	    /**
          * Array
          */
 
@@ -32963,11 +32949,7 @@ public class GalleryFragment extends Fragment {
 
             }
         });
-        /*
-        FirebaseApp.initializeApp(getContext());
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        final DatabaseReference databaseReference = firebaseDatabase.getReference();
-        */
+
         BTguardar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -32985,7 +32967,6 @@ public class GalleryFragment extends Fragment {
                 String localidad = ETlocalidad.getEditText().getText().toString();
                 String anioemision = ETanioemision.getEditText().getText().toString();
                 String vigencia = ETvigencia.getEditText().getText().toString();
-
 
                 if(nombre.equals("")||domicilio.equals("")||curp.equals("")){
 
@@ -33008,14 +32989,6 @@ public class GalleryFragment extends Fragment {
                             vigencia
                     );
 
-                    /*
-                    Activos a = new Activos();
-                    a.setNombre(nombre);
-                    a.setDomicilio(domicilio);
-                    a.setCurp(curp);
-                    databaseReference.child("ine").child(a.getCurp()).setValue(a);
-                    */
-                    //Toast.makeText(getContext(), "Se realizo el registro: " + activos, Toast.LENGTH_SHORT).show();
                     limpiarCajas();
                 }
             }

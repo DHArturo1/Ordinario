@@ -32,67 +32,80 @@
                 <TextView
                     android:id="@+id/ConsultaNombre"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaNombre" />
 
                 <TextView
                     android:id="@+id/ConsultaDomicilio"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaDomicilio" />
 
                 <TextView
                     android:id="@+id/ConsultaFechaNacimiento"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaFechaNacimiento" />
 
                 <TextView
                     android:id="@+id/ConsultaGenero"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaGenero" />
 
                 <TextView
                     android:id="@+id/ConsultaClaveElectoral"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaClaveElectoral" />
 
                 <TextView
                     android:id="@+id/ConsultaCurp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaCurp" />
 
                 <TextView
                     android:id="@+id/ConsultaAnioRegistro"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaAnioRegistro" />
 
                 <TextView
                     android:id="@+id/ConsultaNumeroVersion"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaNumeroVersion" />
 
                 <TextView
                     android:id="@+id/ConsultaDistrito"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaDistrito" />
 
                 <TextView
                     android:id="@+id/ConsultaSeccion"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaSeccion" />
 
                 <TextView
                     android:id="@+id/ConsultaLocalidad"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaLocalidad" />
 
                 <TextView
                     android:id="@+id/ConsultaAnioEmision"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaAnioEmision" />
 
                 <TextView
                     android:id="@+id/ConsultaVigencia"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ConsultaVigencia" />
 
             </LinearLayout>
 
