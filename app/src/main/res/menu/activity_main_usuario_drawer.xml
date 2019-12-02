@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Principal">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_menu_inicio_black"
+                android:title="@string/menu_home" />
+        </menu>
+    </item>
+
+    <item android:title="CRUD en Firebase">
+        <menu>
+            <item
+                android:id="@+id/nav_slideshow"
+                android:icon="@drawable/ic_menu_consulta_vertical_align_bottom_black"
+                android:title="@string/menu_slideshow" />
+        </menu>
+    </item>
+
+
+    <item android:title="Vistas">
+        <menu>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_listar_format_line_spacing_black"
+                android:title="@string/menu_send" />
+            <item
+                android:id="@+id/nav_creditos"
+                android:icon="@drawable/ic_menu_creditos_priority_high_black"
+                android:title="@string/menu_creditos" />
+            <item
+                android:id="@+id/nav_salir"
+                android:icon="@drawable/ic_menu_salir_forward_black"
+                android:title="@string/menu_salir" />
+        </menu>
+    </item>
+
+</menu>

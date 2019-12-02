@@ -28,31 +28,6 @@ public class CreditosFragment extends Fragment {
 
     private CreditosViewModel creditosViewModel;
 
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
-
-    TextView
-            modificarRegistro1,
-            modificarRegistro2,
-            modificarRegistro3,
-            modificarRegistro4,
-            modificarRegistro5,
-            modificarRegistro6,
-            modificarRegistro7,
-            modificarRegistro8,
-            modificarRegistro9,
-            modificarRegistro10;
-
-    TextInputLayout
-            modificarNombreCompleto,
-            modificarCurp,
-            modificarMunicipio;
-
-    Button
-            BTbuscar;
-
-
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         creditosViewModel =

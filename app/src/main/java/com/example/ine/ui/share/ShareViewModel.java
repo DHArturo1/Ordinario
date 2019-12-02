@@ -10,7 +10,7 @@ public class ShareViewModel extends ViewModel {
 
     public ShareViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Actualizacion de estatus");
+        mText.setValue("Eliminación de Información");
     }
 
     public LiveData<String> getText() {

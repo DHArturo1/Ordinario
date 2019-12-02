@@ -10,7 +10,7 @@ public class CreditosViewModel extends ViewModel {
 
     public CreditosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is tools fragment");
+        mText.setValue("Créditos de la Aplicación");
     }
 
     public LiveData<String> getText() {

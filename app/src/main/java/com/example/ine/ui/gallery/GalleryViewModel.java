@@ -10,7 +10,7 @@ public class GalleryViewModel extends ViewModel {
 
     public GalleryViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Alta de Datos");
+        mText.setValue("Alta de Información");
     }
 
     public LiveData<String> getText() {

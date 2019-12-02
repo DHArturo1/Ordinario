@@ -28,10 +28,7 @@ public class ToolsFragment extends Fragment {
 
     private ToolsViewModel toolsViewModel;
 
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
-
-    TextView
+    TextInputLayout
             modificarRegistro1,
             modificarRegistro2,
             modificarRegistro3,
@@ -82,54 +79,6 @@ public class ToolsFragment extends Fragment {
         modificarMunicipio = root.findViewById(R.id.ModificarBusqueda3Municipio);
 
         BTbuscar = root.findViewById(R.id.ModificarBotonBuscar);
-
-        databaseReference = FirebaseDatabase.getInstance().getReference("ine");
-
-        BTbuscar.setOnClickListener(new View.OnClickListener(){
-
-            int cont = 0;
-
-            @Override
-            public void onClick(View v) {
-                final String busquedaCurp = modificarCurp.getEditText().getText().toString().toUpperCase();
-                final String busquedaNombreCompleto = modificarNombreCompleto.getEditText().getText().toString().toUpperCase();
-                final String busquedaMunicipio = modificarMunicipio.getEditText().getText().toString().toUpperCase();
-
-
-                Query q = databaseReference.orderByChild(getString(R.string.campoFirebase2)).equalTo(busquedaNombreCompleto);
-
-                final String clave = "";
-
-                q.addListenerForSingleValueEvent(new ValueEventListener(){
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot){
-
-                        for(DataSnapshot datasnapshot : dataSnapshot.getChildren()){
-                            String clave = datasnapshot.getKey();
-                            databaseReference.child(clave).child(getString(R.string.campoFirebase2)).setValue(modificarRegistro1.getText().toString().toUpperCase());
-                        }
-
-                        if(cont == 0){
-                            Toast.makeText(getContext(), "No se ha encontrado el registro " + busquedaNombreCompleto, Toast.LENGTH_LONG).show();
-                            cont++;
-                        } else if (cont == 1){
-                            Toast.makeText(getContext(), "Se ha encontrado el registro " + busquedaNombreCompleto, Toast.LENGTH_LONG).show();
-                            cont++;
-                        } else if (cont != 1){
-                            Toast.makeText(getContext(), "Se ha encontrado " + cont + " similitudes de " + busquedaNombreCompleto, Toast.LENGTH_LONG).show();
-                            cont++;
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-                cont = 0;
-
-            }
-        });
 
         return root;
 
