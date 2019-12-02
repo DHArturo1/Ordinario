@@ -1,16 +1,16 @@
-package com.example.ine.ui.share;
+package com.example.ine.ui.creditos;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ShareViewModel extends ViewModel {
+public class CreditosViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ShareViewModel() {
+    public CreditosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Actualizacion de estatus");
+        mText.setValue("This is tools fragment");
     }
 
     public LiveData<String> getText() {

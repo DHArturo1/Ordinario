@@ -26,7 +26,7 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE2"
+                android:id="@+id/Alta1NombreCompleto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -43,7 +43,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE3"
+                android:id="@+id/Alta2Domicilio"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -60,7 +60,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <EditText
-                android:id="@+id/AltaE4"
+                android:id="@+id/Alta3FechaNacimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -91,17 +91,18 @@
                     android:textSize="@dimen/InputTextA" />
 
                 <RadioGroup
+                    android:id="@+id/Alta4GeneroRadioGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <RadioButton
-                        android:id="@+id/AltaE5"
+                        android:id="@+id/Alta41Masculino"
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="Masculino" />
 
                     <RadioButton
-                        android:id="@+id/AltaE6"
+                        android:id="@+id/Alta42Femenino"
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="Femenino" />
@@ -109,12 +110,11 @@
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE7"
+                android:id="@+id/Alta5ClaveElectoral"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/MarginLeftET"
-                android:layout_marginTop="@dimen/MarginTopETRB"
-                android:layout_marginRight="@dimen/MarginRightET">
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales" >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -127,7 +127,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE8"
+                android:id="@+id/Alta6Curp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -147,7 +147,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE9"
+                android:id="@+id/Alta7AnioRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -164,7 +164,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE10"
+                android:id="@+id/Alta8NumeroVersion"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -205,7 +205,7 @@
                     android:textSize="@dimen/InputTextA" />
 
                 <Spinner
-                    android:id="@+id/AltaE12"
+                    android:id="@+id/Alta9Distrito"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/DatosIngresoEditText"/>
@@ -226,14 +226,14 @@
                     android:textSize="@dimen/InputTextA" />
 
                 <Spinner
-                    android:id="@+id/AltaE13"
+                    android:id="@+id/AltaASeccion"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/DatosIngresoEditText"/>
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE14"
+                android:id="@+id/AltaBLocalidad"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -250,7 +250,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE15"
+                android:id="@+id/AltaCAnioEmision"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -267,7 +267,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/AltaE16"
+                android:id="@+id/AltaDVigencia"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
@@ -284,14 +284,15 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/AltaE17"
+                android:id="@+id/AltaJRegistrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/MarginA"
                 android:background="@drawable/boton1"
                 android:text="Registrar"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/BotonesTexto" />
+                android:textSize="@dimen/BotonesTexto"
+                android:textAllCaps="false" />
 
         </LinearLayout>
     </ScrollView>

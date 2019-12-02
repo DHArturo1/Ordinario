@@ -1,19 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_slideshow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="@dimen/TituloFragmentsMargenesLaterales"
+        android:layout_marginRight="@dimen/TituloFragmentsMargenesLaterales"
         android:textAlignment="center"
-        android:textSize="@dimen/TituloFragments"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="@dimen/TituloFragments" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ConsultaBusqueda1Curp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Curp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ConsultaBusqueda2NombreCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre Completo" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ConsultaBusqueda3Municipio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Municipio" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/ConsultaBotonBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Consulta1NombreCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_1"
+                    android:drawablePadding="20dp"
+                    android:hint="Nombre completo"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Consulta2Domicilio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_2"
+                    android:drawablePadding="20dp"
+                    android:hint="Domicilio"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/Consulta3FechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
+                android:drawableLeft="@drawable/ic_form_3"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="Fecha de Nacimiento"
+                android:inputType="date"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/DatosIngresoEditText"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/MarginLeftRB"
+                android:layout_marginTop="@dimen/MarginTopETET"
+                android:layout_marginRight="@dimen/MarginRightRB"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_form_11"
+                    android:text="Genero"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/InputTextA" />
+
+                <RadioGroup
+                    android:id="@+id/Consulta4GeneroRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/Consulta41Masculino"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:text="Masculino" />
+
+                    <RadioButton
+                        android:id="@+id/Consulta42Femenino"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:text="Femenino" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Consulta5ClaveElectoral"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_4"
+                    android:drawablePadding="20dp"
+                    android:hint="Clave Electoral"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Consulta6Curp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_5"
+                    android:drawablePadding="20dp"
+                    android:hint="CURP"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Consulta7AnioRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_6"
+                    android:drawablePadding="20dp"
+                    android:hint="Año de Registro"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Consulta8NumeroVersion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_7"
+                    android:drawablePadding="20dp"
+                    android:hint="Numero de Version"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/MarginLeftTV"
+                android:layout_marginTop="@dimen/MarginTopTVSP"
+                android:layout_marginRight="@dimen/MarginRightTV"
+                android:text="Estado de México - 15"
+                android:textSize="@dimen/InputTextA" />
+
+            <!--Municipio-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/MarginLeftSP"
+                android:layout_marginTop="@dimen/MarginTopETRB"
+                android:layout_marginRight="@dimen/MarginRightSP"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Distrito"
+                    android:textSize="@dimen/InputTextA" />
+
+                <Spinner
+                    android:id="@+id/Consulta9Distrito"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </LinearLayout>
+
+            <!--Seccion-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/MarginLeftSP"
+                android:layout_marginRight="@dimen/MarginRightSP"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Seccion"
+                    android:textSize="@dimen/InputTextA" />
+
+                <Spinner
+                    android:id="@+id/ConsultaASeccion"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ConsultaBLocalidad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_8"
+                    android:drawablePadding="20dp"
+                    android:hint="Localidad"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ConsultaCAnioEmision"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_9"
+                    android:drawablePadding="20dp"
+                    android:hint="Año de Emision"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ConsultaDVigencia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_form_10"
+                    android:drawablePadding="20dp"
+                    android:hint="Vigencia"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ConsultaFGaleria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boton1"
+                    android:text="Galeria"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/BotonesTexto"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/ConsultaGCamara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boton1"
+                    android:text="Camara"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/BotonesTexto"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ConsultaHImagen"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/ConsultaJRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/MarginA"
+                android:background="@drawable/boton1"
+                android:text="Registrar"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/BotonesTexto"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ConsultaBusqueda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boton1"
+        android:text="Galeria"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/BotonesTexto" />
+
+</LinearLayout>

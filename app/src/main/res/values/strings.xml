@@ -13,6 +13,10 @@
     <string name="menu_tools">Modificar</string>
     <string name="menu_share">Eliminar</string>
     <string name="menu_send">Listar</string>
-    <string name="menu_g">Créditos</string>
-    <string name="menu_h">Salir</string>
+    <string name="menu_creditos">Créditos</string>
+    <string name="menu_salir">Salir</string>
+
+    <string name="campoFirebase1">curp</string>
+    <string name="campoFirebase2">nombre</string>
+    <string name="campoFirebase3">distrito</string>
 </resources>

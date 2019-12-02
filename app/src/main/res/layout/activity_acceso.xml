@@ -4,99 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccesoActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".AccesoActivity">
 
-    <ImageView
-        android:id="@+id/AccesoIV1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/ImageHeightA"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_margin="@dimen/PaddingA"
-        android:padding="30dp"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/AccesoTV1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="INE"
-        android:textSize="@dimen/TituloFragments"
-        android:layout_marginLeft="@dimen/TituloFragmentsMargenesLaterales"
-        android:layout_marginRight="@dimen/TituloFragmentsMargenesLaterales"
-        android:textAlignment="center"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/AccesoET1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
-        android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
-        android:textColorHint="@color/colorINEA"
-        app:boxStrokeColor="@color/colorINEB"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario"
-            android:textSize="@dimen/DatosIngresoEditText"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:paddingLeft="10dp"
-            android:drawablePadding="20dp"
-            android:drawableLeft="@drawable/ic_person_outline_black"
-            android:textColorHint="@color/colorAccent"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical" >
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/AccesoET2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
-        android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
-        app:passwordToggleEnabled="true"
-        android:textColorHint="@color/colorINEA"
-        app:boxStrokeColor="@color/colorINEB"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <ImageView
+                android:id="@+id/AccesoIV1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ImageHeightA"
+                android:layout_margin="@dimen/PaddingA"
+                android:padding="30dp"
+                app:srcCompat="@mipmap/ic_launcher" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:paddingRight="10dp"
-            android:drawablePadding="20dp"
-            android:hint="Contraseña"
-            android:textSize="@dimen/DatosIngresoEditText"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/AccesoTV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/TituloFragmentsMargenesLaterales"
+                android:layout_marginRight="@dimen/TituloFragmentsMargenesLaterales"
+                android:text="INE"
+                android:textAlignment="center"
+                android:textSize="@dimen/TituloFragments" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/MarginTopA"
-        android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/AccesoET1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
+                android:textColorHint="@color/colorINEA"
+                app:boxStrokeColor="@color/colorINEB">
 
-        <Button
-            android:id="@+id/AccesoBT1"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="25dp"
-            android:background="@drawable/boton2"
-            android:text="Iniciar Sesion"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/BotonesTexto"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_person_outline_black"
+                    android:drawablePadding="20dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Usuario"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@color/colorAccent"
+                    android:textSize="@dimen/DatosIngresoEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/AccesoBT2"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:background="@drawable/boton1"
-            android:layout_weight="1"
-            android:text="Salir"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/BotonesTexto"/>
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/AccesoET2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
+                android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
+                android:textColorHint="@color/colorINEA"
+                app:boxStrokeColor="@color/colorINEB"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="20dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:paddingRight="10dp"
+                    android:textSize="@dimen/DatosIngresoEditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/MarginTopA"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/AccesoBT1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/boton2"
+                    android:text="Iniciar Sesion"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/BotonesTexto" />
+
+                <Button
+                    android:id="@+id/AccesoBT2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boton1"
+                    android:text="Salir"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/BotonesTexto" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

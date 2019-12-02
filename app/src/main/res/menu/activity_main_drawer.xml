@@ -3,35 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
-    </group>
-
-    <item android:title="Communicate">
+    <item android:title="Principal">
         <menu>
             <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_menu_inicio_black"
+                android:title="@string/menu_home" />
+        </menu>
+    </item>
+
+    <item android:title="CRUD en Firebase">
+        <menu>
+            <item
+                android:id="@+id/nav_gallery"
+                android:icon="@drawable/ic_menu_alta_vertical_align_top_black"
+                android:title="@string/menu_gallery" />
+            <item
+                android:id="@+id/nav_slideshow"
+                android:icon="@drawable/ic_menu_consulta_vertical_align_bottom_black"
+                android:title="@string/menu_slideshow" />
+            <item
+                android:id="@+id/nav_tools"
+                android:icon="@drawable/ic_menu_modificar_vertical_align_center_black"
+                android:title="@string/menu_tools" />
+            <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_eliminar_do_not_disturb_on_black"
                 android:title="@string/menu_share" />
+        </menu>
+    </item>
+
+
+    <item android:title="Vistas">
+        <menu>
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_menu_listar_format_line_spacing_black"
                 android:title="@string/menu_send" />
+            <item
+                android:id="@+id/nav_creditos"
+                android:icon="@drawable/ic_menu_creditos_priority_high_black"
+                android:title="@string/menu_creditos" />
+            <item
+                android:id="@+id/nav_salir"
+                android:icon="@drawable/ic_menu_salir_forward_black"
+                android:title="@string/menu_salir" />
         </menu>
     </item>
 

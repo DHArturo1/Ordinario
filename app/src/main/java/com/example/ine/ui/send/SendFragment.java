@@ -62,17 +62,16 @@ public class SendFragment extends Fragment {
 
         listarDatos();
 
-
         return root;
     }
 
     private void listarDatos(){
 
-        databaseReference.child("ine").addValueEventListener(new ValueEventListener(){
+        databaseReference.child("ine").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                for(DataSnapshot objSnapshot: dataSnapshot.getChildren()){
+                for (DataSnapshot objSnapshot : dataSnapshot.getChildren()) {
                     Activos a = objSnapshot.getValue(Activos.class);
                     lstActivos.add(a);
 

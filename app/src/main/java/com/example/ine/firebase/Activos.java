@@ -2,7 +2,6 @@ package com.example.ine.firebase;
 
 public class Activos {
 
-    String Url;
     String Nombre;
     String Domicilio;
     String FechaNacimiento;
@@ -16,16 +15,9 @@ public class Activos {
     String Localidad;
     String AnioEmision;
     String Vigencia;
+    String Estatus;
 
     public Activos() {
-    }
-
-    public String getUrl() {
-        return Url;
-    }
-
-    public void setUrl(String url) {
-        Url = url;
     }
 
     public String getNombre() {
@@ -130,5 +122,13 @@ public class Activos {
 
     public void setVigencia(String vigencia) {
         Vigencia = vigencia;
+    }
+
+    public String getEstatus() {
+        return Estatus;
+    }
+
+    public void setEstatus(String estatus) {
+        Estatus = estatus;
     }
 }
