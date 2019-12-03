@@ -30,7 +30,8 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
+        <activity android:name=".ui.creditos.VentanaEmergente"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorINEB">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VentanaEmergente1"
+        android:textAlignment="center"
+        android:textColor="@color/colorINEE"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VentanaEmergente2"
+        android:textAlignment="center"
+        android:textColor="@color/colorINEE"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VentanaEmergente3"
+        android:textAlignment="center"
+        android:textColor="@color/colorINEE"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VentanaEmergente4"
+        android:textAlignment="center"
+        android:textColor="@color/colorINEE"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VentanaEmergente5"
+        android:textAlignment="center"
+        android:textColor="@color/colorINEE"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VentanaEmergente6"
+        android:textAlignment="center"
+        android:textColor="@color/colorINEE"
+        android:textSize="15dp" />
+</LinearLayout>

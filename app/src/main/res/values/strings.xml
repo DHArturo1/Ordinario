@@ -19,4 +19,11 @@
     <string name="campoFirebase1">curp</string>
     <string name="campoFirebase2">nombre</string>
     <string name="campoFirebase3">distrito</string>
+
+    <string name="VentanaEmergente1">Desarrollador:</string>
+    <string name="VentanaEmergente2">Luis Arturo Díaz Hinojosa</string>
+    <string name="VentanaEmergente3">Materia:</string>
+    <string name="VentanaEmergente4">Programación Aplicada a Sistemas de Cómputo Móvil</string>
+    <string name="VentanaEmergente5">Profesor:</string>
+    <string name="VentanaEmergente6">M. en C. Rocío Elizabeth Pulido Alba</string>
 </resources>

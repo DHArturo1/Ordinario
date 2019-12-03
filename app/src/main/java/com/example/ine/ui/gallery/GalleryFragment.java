@@ -1,5 +1,6 @@
 package com.example.ine.ui.gallery;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -33,6 +35,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -42,6 +45,8 @@ public class GalleryFragment extends Fragment {
     private GalleryViewModel galleryViewModel;
 
     DatabaseReference databaseReference;
+
+    Calendar calendar;
 
     String 
             a = "",
@@ -68,7 +73,7 @@ public class GalleryFragment extends Fragment {
             SPseccion;
 
     EditText
-            CVfechanacimiento;
+            DPfechanacimiento;
 
     Button
             BTguardar;
@@ -88,7 +93,7 @@ public class GalleryFragment extends Fragment {
 
         ETnombre = root.findViewById(R.id.Alta1NombreCompleto);
         ETdomicilio = root.findViewById(R.id.Alta2Domicilio);
-        CVfechanacimiento = root.findViewById(R.id.Alta3FechaNacimiento);
+        DPfechanacimiento = root.findViewById(R.id.Alta3FechaNacimiento);
         RBmasculino = root.findViewById(R.id.Alta41Masculino);
         RBfemenino = root.findViewById(R.id.Alta42Femenino);
         ETclaveelectoral = root.findViewById(R.id.Alta5ClaveElectoral);
@@ -101,6 +106,27 @@ public class GalleryFragment extends Fragment {
         ETanioemision = root.findViewById(R.id.AltaCAnioEmision);
         ETvigencia = root.findViewById(R.id.AltaDVigencia);
         BTguardar = root.findViewById(R.id.AltaJRegistrar);
+
+        DPfechanacimiento.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View view){
+               calendar = Calendar.getInstance();
+               int day = calendar.get(Calendar.DAY_OF_MONTH);
+               int month = calendar.get(Calendar.MONTH);
+               int year = calendar.get(Calendar.YEAR);
+
+               DatePickerDialog datePickerDialog;
+               datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+                   @Override
+                   public void onDateSet(DatePicker view, int fyear, int fmonth, int fdayOfMonth) {
+                       fmonth++;
+                       String date = fdayOfMonth + " / " + fmonth + " / " + fyear;
+                       DPfechanacimiento.setText(date);
+                   }
+               }, day, month, year);
+               datePickerDialog.show();
+           }
+        });
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 		
@@ -32984,7 +33010,7 @@ public class GalleryFragment extends Fragment {
                 
                 String nombre = ETnombre.getEditText().getText().toString().toUpperCase();
                 String domicilio = ETdomicilio.getEditText().getText().toString().toUpperCase();
-                String fechanacimiento = CVfechanacimiento.getText().toString().toUpperCase();
+                String fechanacimiento = DPfechanacimiento.getText().toString().toUpperCase();
                 genero = genero.toString().toUpperCase();
                 String claveelectoral = ETclaveelectoral.getEditText().getText().toString().toUpperCase();
                 String curp = ETcurp.getEditText().getText().toString().toUpperCase();
