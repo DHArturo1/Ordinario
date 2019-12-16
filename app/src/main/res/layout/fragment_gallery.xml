@@ -133,7 +133,7 @@
                 android:layout_marginLeft="@dimen/DatosIngresoMargenesLaterales"
                 android:layout_marginRight="@dimen/DatosIngresoMargenesLaterales"
                 app:counterEnabled="true"
-                app:counterMaxLength="15"
+                app:counterMaxLength="18"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
